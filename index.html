@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gesang Ramadhan - Student</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #CBD5E1; /* Light blue pastel */
+      color: #2D3748;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Biar footer selalu di bawah */
+    }
+
+    header {
+      background-color: #FFFFFF;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #E2E8F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #4A5568;
+    }
+
+    .logo span {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #2D3748;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #00C8FF;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    nav a:hover {
+      color: #00C8FF;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      padding: 3rem 2rem;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-grow: 1; /* Biar hero ngisi ruang sampai footer */
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #2D3748;
+      letter-spacing: 1px;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #4A5568;
+      font-weight: 300;
+    }
+
+    .profile-circle {
+      width: 250px;
+      height: 250px;
+      background-color: #E2E8F0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #4A5568;
+    }
+
+    footer {
+      background-color: #FFFFFF;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+      margin-top: auto; /* 👈 Ini yang bikin footer nempel di bawah */
+    }
+
+    .copyright {
+      font-size: 0.9rem;
+      color: #4A5568;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .social-icons a {
+      color: #2D3748;
+      font-size: 1.5rem;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    .social-icons a:hover {
+      color: #00C8FF;
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1rem;
+      }
+
+      .profile-circle {
+        width: 180px;
+        height: 180px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div>GR</div>
+      <span>Gesang Ramadhan</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#achievement">Achievement</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero-text">
+      <h1>Gesang Ramadhan</h1>
+      <p>A Student</p>
+    </div>
+    <div class="profile-circle">
+      <!-- Placeholder foto -->
+    </div>
+  </main>
+
+  <footer>
+    <div class="copyright">© Gesang Ramadhan</div>
+    <div class="social-icons">
+      <a href="#" title="Gmail"><i class="fab fa-google"></i>M</a>
+      <a href="#" title="Instagram"><i class="fab fa-instagram"></i>IG</a>
+      <a href="#" title="GitHub"><i class="fab fa-github"></i>GH</a>
+      <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i>IN</a>
+      <a href="#" title="Discord"><i class="fab fa-discord"></i>DC</a>
+    </div>
+  </footer>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
