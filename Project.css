@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #CBD5E1;
+  color: #2D3748;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #FFFFFF;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #4A5568;
+}
+
+.logo span {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #2D3748;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #00C8FF;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover {
+  color: #00C8FF;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.project-section {
+  padding: 3rem 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2D3748;
+}
+
+.project-section h2 span {
+  color: #DC2626; /* Merah untuk "ect" */
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #FFFFFF, #E2F0FB);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  min-height: 380px; /* 🔥 Ini yang bikin kartu lebih panjang! */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card-header {
+  background: linear-gradient(45deg, #00C8FF, #00A8CC);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-small {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.card-content {
+  padding: 1.5rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #2D3748;
+  letter-spacing: 0.5px;
+}
+
+.cert-logo {
+  margin: 1rem 0;
+}
+
+.cert-logo img {
+  max-width: 80px;
+  height: auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.presented-by {
+  font-size: 0.85rem;
+  color: #6B7280;
+  margin-top: auto;
+  font-style: italic;
+}
+
+footer {
+  background-color: #FFFFFF;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  margin-top: auto;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #4A5568;
+}
+
+@media (max-width: 768px) {
+  .project-section h2 {
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 320px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}
